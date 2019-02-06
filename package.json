@@ -4,14 +4,14 @@
   "description": "A menubar app adaptation of Emoji searcher.",
   "main": "index.js",
   "dependencies": {
-    "electron-is-dev": "^0.1.2",
-    "emojilib": "2.2.3",
-    "menubar": "^5.1.0"
+    "electron-is-dev": "^1.0.1",
+    "emojilib": "2.4.0",
+    "menubar": "^5.2.3"
   },
   "devDependencies": {
-    "electron": "^1.6.0",
-    "electron-packager": "^8.0.0",
-    "standard": "^10.0.2"
+    "electron": "^4.0.4",
+    "electron-packager": "^13.0.1",
+    "standard": "^12.0.1"
   },
   "scripts": {
     "start": "electron .",
