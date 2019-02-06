@@ -91,7 +91,7 @@ var togglePreferencePanel = function () {
         html += '<select id="' + key + '">>'
         html += `<option value="">None</option>`
         modifiers.forEach(function (modifier) {
-          html += `<option value="${modifier}" ${preference[key] === modifier ? 'selected' : ''}>${modifier}</option>`
+          html += `<option value="${modifier}" ${preference[key] === modifier ? 'selected' : ''}>!!!${modifier}</option>`
         })
         html += '</select>'
         html += '</label>'

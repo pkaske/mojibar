@@ -3,6 +3,41 @@
   "version": "2.6.2",
   "description": "A menubar app adaptation of Emoji searcher.",
   "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build:linux": "build -l -p never",
+    "test": "standard index.js app/search.js app/settings.js"
+  },
+  "build": {
+    "appId": "mojibar",
+    "productName": "Mojibar",
+    "artifactName": "mojibar-${version}.${ext}",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "resources/icon.*",
+      "package.json",
+      "index.js"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "linux": {
+      "category": "Utils",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "appImage": {
+      "license": "license.md",
+      "artifactName": "mojibar-${version}-${arch}.${ext}"
+    }
+  },
   "dependencies": {
     "electron-is-dev": "^1.0.1",
     "emojilib": "2.4.0",
@@ -10,14 +45,8 @@
   },
   "devDependencies": {
     "electron": "^4.0.4",
-    "electron-packager": "^13.0.1",
+    "electron-builder": "^20.38.5",
     "standard": "^12.0.1"
-  },
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . Mojibar --platform=darwin --arch=x64 --overwrite --icon=mojibar",
-    "build:linux": "electron-packager . Mojibar --platform=linux --arch=x64 --overwrite --icon=mojibar",
-    "test": "standard index.js app/search.js app/settings.js"
   },
   "repository": {
     "type": "git",

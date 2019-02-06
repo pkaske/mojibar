@@ -203,6 +203,7 @@ function renderResults (emojiNameArray, containerElement) {
     var resultElement = document.createElement('button')
     resultElement.type = 'button'
     resultElement.className = 'emoji'
+    resultElement.title = name;
     resultElement.setAttribute('aria-label', name)
     resultElement.textContent = unicode
     fragment.appendChild(resultElement)
