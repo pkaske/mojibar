@@ -23,7 +23,7 @@
       "buildResources": "resources"
     },
     "linux": {
-      "category": "Utils",
+      "category": "Utility",
       "target": [
         {
           "target": "AppImage",
